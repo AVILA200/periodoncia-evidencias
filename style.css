@@ -154,3 +154,637 @@ hr {
         font-size: 19px;
     }
 }
+
+/* ==========================================
+   PORTADA
+========================================== */
+
+.subtitle{
+
+    text-align:center;
+
+    font-size:24px;
+
+    color:#555;
+
+    margin-top:15px;
+
+    margin-bottom:25px;
+
+}
+
+.menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+    margin-top:35px;
+
+}
+
+.menu-btn{
+
+    display:block;
+
+    text-decoration:none;
+
+    background:#0B5ED7;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    text-align:center;
+
+    padding:20px;
+
+    border-radius:14px;
+
+    transition:.30s;
+
+}
+
+.menu-btn:hover{
+
+    background:#084298;
+
+    transform:translateY(-3px);
+
+}
+
+.footer{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    color:#666;
+
+    font-style:italic;
+
+}
+
+
+/* ==========================================
+   PORTADA ELEGANTE
+========================================== */
+
+.home-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.home-card::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 300px;
+    height: 300px;
+    background: rgba(11, 94, 215, 0.10);
+    border-radius: 50%;
+}
+
+.home-header {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.badge {
+    display: inline-block;
+    background: #eaf2ff;
+    color: #0B3B70;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.student {
+    font-size: 21px;
+    color: #444;
+    margin-top: 25px;
+    line-height: 1.8;
+}
+
+.evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.evidence-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    text-decoration: none;
+    background: linear-gradient(135deg, #0B5ED7, #0B3B70);
+    color: white;
+    padding: 24px;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(11, 94, 215, 0.25);
+    transition: 0.3s;
+}
+
+.evidence-card:hover {
+    transform: translateY(-5px);
+}
+
+.evidence-card .icon {
+    font-size: 38px;
+}
+
+.evidence-card strong {
+    display: block;
+    font-size: 22px;
+}
+
+.evidence-card small {
+    display: block;
+    font-size: 16px;
+    margin-top: 6px;
+    opacity: 0.9;
+}
+
+@media(max-width:768px) {
+    .evidence-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   PORTADA PREMIUM AZUL + DORADO
+========================================== */
+
+.home-body{
+    min-height:100vh;
+    background:#071321;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Imagen de fondo */
+
+.home-bg{
+
+    position:fixed;
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            90deg,
+            rgba(3,10,18,.93) 0%,
+            rgba(6,18,34,.82) 45%,
+            rgba(36,28,20,.45) 100%
+        ),
+
+        url("img/fondo-periodoncia.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    filter:brightness(.82);
+
+    z-index:-4;
+
+}
+
+/* Luces */
+
+.home-overlay{
+
+    position:fixed;
+    inset:0;
+
+    background:
+
+        radial-gradient(circle at 18% 35%,
+        rgba(0,240,255,.18),
+        transparent 35%),
+
+        radial-gradient(circle at 82% 18%,
+        rgba(255,211,122,.22),
+        transparent 30%);
+
+    z-index:-3;
+
+}
+
+/* Cuadrícula */
+
+.tech-grid{
+
+    position:fixed;
+    inset:0;
+
+    background-image:
+
+        linear-gradient(rgba(0,240,255,.06) 1px,transparent 1px),
+
+        linear-gradient(90deg,rgba(255,211,122,.05) 1px,transparent 1px);
+
+    background-size:42px 42px;
+
+    opacity:.45;
+
+    z-index:-2;
+
+}
+
+/* Línea animada */
+
+.scan-line{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:2px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        #00F0FF,
+
+        #FFD37A,
+
+        transparent
+
+    );
+
+    box-shadow:
+
+        0 0 18px #00F0FF,
+
+        0 0 24px #FFD37A;
+
+    animation:scanMove 5s linear infinite;
+
+    z-index:-1;
+
+}
+
+/* Contenedor */
+
+.home-container{
+
+    min-height:100vh;
+
+    width:92%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:45px 0;
+
+}
+
+/* Panel principal */
+
+.home-panel{
+
+    width:100%;
+    max-width:900px;
+
+    padding:48px 58px;
+
+    background:rgba(5,16,30,.82);
+
+    border:1px solid rgba(255,211,122,.32);
+
+    backdrop-filter:blur(16px);
+
+    box-shadow:
+
+        0 0 40px rgba(0,240,255,.15),
+
+        0 0 28px rgba(255,211,122,.08),
+
+        inset 0 0 30px rgba(0,240,255,.05);
+
+    clip-path:polygon(
+        0 0,
+        95% 0,
+        100% 8%,
+        100% 100%,
+        6% 100%,
+        0 92%
+    );
+
+    animation:panelIn .9s ease;
+
+}
+
+/* Texto superior */
+
+.classified{
+
+    color:#FFD37A;
+
+    letter-spacing:7px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:26px;
+
+}
+
+/* Título */
+
+.home-panel h1{
+
+    color:white;
+
+    text-align:left;
+
+    font-size:58px;
+
+    line-height:1.05;
+
+    letter-spacing:2px;
+
+    margin-bottom:32px;
+
+    text-shadow:
+
+        0 0 12px rgba(0,240,255,.75),
+
+        0 0 24px rgba(255,211,122,.30);
+
+}
+
+/* Caja de información */
+
+.home-panel .info-box{
+
+    padding:24px 30px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,211,122,.25);
+
+    background:rgba(13,28,46,.45);
+
+    margin-bottom:30px;
+
+}
+
+.home-panel .info-box p{
+
+    font-size:19px;
+
+    color:white;
+
+    margin:13px 0;
+
+}
+
+.home-panel .info-box span{
+
+    color:#FFD37A;
+
+    font-weight:700;
+
+}
+
+/* Tarjetas */
+
+.evidence-menu{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin:30px 0;
+
+}
+
+.home-btn{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    border:1px solid rgba(0,240,255,.28);
+
+    background:rgba(5,18,32,.72);
+
+    transition:.35s;
+
+    box-shadow:
+
+        inset 0 0 15px rgba(0,240,255,.04);
+
+}
+
+.home-btn:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#FFD37A;
+
+    background:rgba(8,25,45,.82);
+
+    box-shadow:
+
+        0 0 22px rgba(0,240,255,.18),
+
+        0 0 28px rgba(255,211,122,.18);
+
+}
+
+.home-btn strong{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:20px;
+
+    color:#FFD37A;
+
+}
+
+.home-btn small{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:rgba(255,255,255,.82);
+
+    font-size:15px;
+
+}
+
+/* Texto inferior */
+
+.online{
+
+    text-align:center;
+
+    color:#FFD37A;
+
+    letter-spacing:4px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin-top:30px;
+
+}
+
+/* Animaciones */
+
+@keyframes scanMove{
+
+    0%{top:0;}
+
+    100%{top:100%;}
+
+}
+
+@keyframes panelIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+        filter:blur(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+        filter:blur(0);
+
+    }
+
+}
+
+@media(max-width:850px){
+
+    .home-panel{
+
+        padding:32px 26px;
+
+        clip-path:none;
+
+        border-radius:20px;
+
+    }
+
+    .home-panel h1{
+
+        font-size:40px;
+
+        text-align:center;
+
+    }
+
+    .classified{
+
+        text-align:center;
+
+        letter-spacing:4px;
+
+    }
+
+    .evidence-menu{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/* ==========================================
+   BOTÓN VOLVER AL INICIO
+========================================== */
+
+.back-home{
+
+    position:fixed;
+
+    top:25px;
+
+    left:25px;
+
+    z-index:9999;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    padding:14px 22px;
+
+    border-radius:14px;
+
+    background:rgba(7,25,45,.85);
+
+    border:1px solid rgba(255,211,122,.45);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25),
+        0 0 18px rgba(255,211,122,.12);
+
+    transition:.30s;
+
+}
+
+.back-home:hover{
+
+    background:#0B3B70;
+
+    color:#FFD37A;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 22px rgba(255,211,122,.30);
+
+}
